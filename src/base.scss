@@ -1,0 +1,123 @@
+// VARIABLES
+$cyan: hsl(179,62%,43%);
+$bright-yellow: hsl(71,73%,54%);
+$light-gray: hsl(204,43%,93%);
+$grayish-blue: hsl(218,22%,67%);
+$white: hsl(225,100%,100%);
+
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Karla', sans-serif;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    background-color:$light-gray;
+    display:grid;
+    place-items:center;
+
+    h2{
+        margin:.5em 0;
+        font-weight:700;
+    }
+
+    .price{
+        max-width:600px;
+        width:90%;
+        min-height:400px;
+        background-color:$white;
+        display:grid;
+        grid-template-columns:100%;
+
+        .price__horizontal:nth-child(1){
+
+            h2{
+                color:$cyan;
+            }
+
+
+            h3{
+                color:$bright-yellow;
+                margin:1.25em 0;
+            }
+        }
+    }
+
+    .box{
+        padding:2.25em;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .price__horizontal{
+        min-height:200px;
+    }
+
+    
+    .price__horizontal--two{
+        display:grid;
+        grid-template-columns:50% 50%;
+        color:$white;
+
+        .price__horizontal--vertical{
+            background-color:$cyan;
+
+            h1{
+                display:flex;
+                align-items:center;
+            }
+
+            span{
+                font-size:.8em;
+                color: $light-gray;
+                font-weight:400;
+            }
+
+            p{
+                margin:.5em 0;
+            }
+
+            a{
+                padding:1rem;
+                background-color:$bright-yellow;
+                border-radius:.5em;
+                font-size:1.25em;
+                text-decoration:none;
+                text-align:center;
+                margin:1.25em 0;
+                font-weight:700;
+                color:$white;
+            }
+
+        }
+
+        .price__horizontal--vertical--two{
+            background-color:$grayish-blue;
+        }
+    }
+
+    @media (max-width: 375px){
+        .price__horizontal--two{
+            grid-template-columns:100%;
+        }
+        .price__horizontal--vertical--two{
+            // order:-1;
+        }
+    }
+
+    footer{
+        margin:1.25em 0;
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+    
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
