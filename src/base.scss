@@ -27,7 +27,7 @@ body{
     .price{
         max-width:600px;
         width:90%;
-        min-height:400px;
+        min-height:250px;
         background-color:$white;
         display:grid;
         grid-template-columns:100%;
@@ -93,9 +93,11 @@ body{
             }
 
         }
-
         .price__horizontal--vertical--two{
             background-color:$grayish-blue;
+                p{
+                    max-width:24ch;
+                }
         }
     }
 
@@ -103,13 +105,11 @@ body{
         .price__horizontal--two{
             grid-template-columns:100%;
         }
-        .price__horizontal--vertical--two{
-            // order:-1;
-        }
     }
 
     footer{
         margin:1.25em 0;
+        display:none;
 
         .attribution {
             font-size: 11px;
